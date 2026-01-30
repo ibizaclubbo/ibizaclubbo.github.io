@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ibiza Club — Home</title>
+  <link rel="icon" type="image/png" href="/assets/logo_ibiza.png">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="./index.html" aria-label="Ibiza Club Home">
+        <div class="logo"><img class="logoImg" src="./assets/logo_ibiza.png" alt="Ibiza Club logo"></div>
+        <span class="brandText">Ibiza Club</span>
+      </a>
+
+      <nav class="navlinks" aria-label="Primary">
+        <a href="./index.html">Inicio</a>
+        <a href="./events.html">Entradas</a>
+        <a href="./vip.html">VIP</a>
+        <a href="./contacts.html">Contacto</a>
+      </nav>
+
+      <div class="navRight">
+        <a class="navCta" href="./events.html">Comprar entradas</a>
+        <button class="iconbtn" id="menuBtn" aria-label="Abrir menú"><span class="burger" aria-hidden="true"><span></span><span></span><span></span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobileMenu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="mobilePanel">
+      <div class="closeRow">
+        <strong>Menu</strong>
+        <button class="iconbtn" id="menuCloseBtn" aria-label="Cerrar menú"><span class="burger close" aria-hidden="true"><span></span><span></span><span></span></span></button>
+      </div>
+      <a href="./index.html">Inicio</a>
+      <a href="./events.html">Entradas</a>
+      <a href="./vip.html">VIP</a>
+      <a href="./contacts.html">Contacto</a>
+    </div>
+  </div>
+<main>
+  <section class="hero center">
+    <div class="container">
+      <div class="kicker"><span class="dot"></span> Noches inmersivas • Londres</div>
+      <h1>La mejor noche<br/>que vivirás.</h1>
+      <p class="sub">Creando los mejores recuerdos desde 2023.</p>
+
+      <div class="pillGalleryWrap">
+        <div class="pillGallery" aria-hidden="true">
+          <div class="pillImg short" style="--img:url('./assets/pills/pill4.jpg'); --y:24px; --d:0.00s"></div>
+          <div class="pillImg mid" style="--img:url('./assets/pills/pill7.jpg'); --y:-10px; --d:0.12s"></div>
+          <div class="pillImg tall" style="--img:url('./assets/pills/pill8.jpg'); --y:-34px; --d:0.24s"></div>
+          <div class="pillImg mid" style="--img:url('./assets/pills/pill5.jpg'); --y:14px; --d:0.36s"></div>
+          <div class="pillImg short" style="--img:url('./assets/pills/pill9.jpg'); --y:-6px; --d:0.48s"></div>
+          <div class="pillImg tall" style="--img:url('./assets/pills/pill3.jpg'); --y:-30px; --d:0.60s"></div>
+          <div class="pillImg mid" style="--img:url('./assets/pills/pill6.jpg'); --y:-18px; --d:0.72s"></div>
+          <div class="pillImg tall" style="--img:url('./assets/pills/pill1.jpg'); --y:10px; --d:0.84s"></div>
+          <div class="pillImg mid" style="--img:url('./assets/pills/pill2.jpg'); --y:-12px; --d:0.96s"></div>
+        </div>
+      </div>
+
+      <div class="ctaRow">
+        <a class="btn primary" href="./events.html">Comprar entradas</a>
+        <a class="btn" href="./vip.html">Get VIP</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid2">
+        <div>
+          <h2>Próximos<br/>eventos</h2>
+          <p>Ibiza Club presenta una serie de eventos electrizantes con techno, EDM y house.
+            Con DJs de primer nivel y visuales inmersivos, cada noche promete una experiencia multisensorial.</p>
+          <a class="btn" href="./events.html">Comprar entradas</a>
+        </div>
+
+        <div class="card poster">
+          <div class="posterArt" role="img" aria-label="Saturday event poster"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section sm">
+    <div class="container">
+      <div class="djRow">
+        <div>
+          <h2>La siguiente <br/>generaci&oacute;n<br/>de DJS</h2>
+        </div>
+
+        <div class="djCards">
+          <div class="djCard">
+            <div class="djImg"></div>
+            <div class="djBody">
+              <div>
+                <strong>DJ Yoxi</strong>
+                <span class="tag">Cumbia</span>
+              </div>
+<!--              <div class="play" title="Play">▶</div>-->
+            </div>
+          </div>
+
+          <div class="djCard">
+            <div class="djImg" style="background:linear-gradient(135deg, rgba(255,59,212,.18), rgba(255,255,255,.10))"></div>
+            <div class="djBody">
+              <div>
+                <strong>DJ Lux</strong>
+                <span class="tag">Reggaeton</span>
+              </div>
+<!--              <div class="play" title="Play">▶</div>-->
+            </div>
+          </div>
+
+          <div class="djCard">
+            <div class="djImg" style="background:linear-gradient(135deg, rgba(255,160,60,.26), rgba(255,255,255,.10))"></div>
+            <div class="djBody">
+              <div>
+                <strong>DJ Noxi</strong>
+                <span class="tag">Cl&aacute;sicos</span>
+              </div>
+<!--              <div class="play" title="Play">▶</div>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container center">
+      <h2>Clubbing de nueva generación</h2>
+      <div class="textBlock">
+        <p>Sumérgete en los beats más intensos con producción de alto nivel, redefiniendo la esencia del clubbing en espacios multi-sala. De artistas innovadores a invitados sorpresa y B2Bs espontáneos.</p>
+        <p>Llega temprano para asegurar tu lugar en la pista y explorar nuestros espacios: terrazas, barras premium y rincones pensados para elevar tu experiencia.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section sm">
+    <div class="container center">
+      <h2>Redes sociales</h2>
+      <div class="socialHandle">@ibiza.club.satelite_1</div>
+
+      <div class="socialGrid">
+        <div class="mediaCard">
+            <img src="./assets/stand.jpg" alt="Flowers in a field">
+        </div>
+        <div class="mediaCard">
+            <img src="./assets/lights.jpg" alt="Flowers in a field">
+        </div>
+        <div class="mediaCard">
+            <img src="./assets/girls.jpg" alt="Flowers in a field">
+        </div>
+        <div class="mediaCard">
+            <img src="./assets/hat.jpg" alt="Flowers in a field">
+        </div>
+        <div class="mediaCard">
+            <img src="./assets/couple.jpg" alt="Flowers in a field">
+        </div>
+        <div class="mediaCard">
+            <img src="./assets/girls2.jpg" alt="Flowers in a field">
+        </div>
+      </div>
+
+      <div class="followRow">
+        <a class="btn" href="https://www.tiktok.com/@ibiza.club.satelite_1" target="_blank">Seguir en TikTok</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footTop">
+        <div class="footLinks">
+          <a href="./events.html">Entradas</a>
+          <a href="./vip.html">VIP</a>
+          <a href="./contacts.html">Contacto</a>
+<!--          <a href="./privacy.html">Política de privacidad</a>-->
+        </div>
+
+        <div class="footSocial" aria-label="Social media">
+          <!--          <a class="socBtn" href="#" onclick="event.preventDefault()" aria-label="Instagram">-->
+          <!--            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">-->
+          <!--              <path d="M7.5 2.5h9A5 5 0 0 1 21.5 7.5v9a5 5 0 0 1-5 5h-9a5 5 0 0 1-5-5v-9a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="1.6"/>-->
+          <!--              <path d="M12 16.2a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4Z" stroke="currentColor" stroke-width="1.6"/>-->
+          <!--              <path d="M17.2 6.8h.01" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>-->
+          <!--            </svg>-->
+          <!--          </a>-->
+          <a class="socBtn" href="https://www.tiktok.com/@ibiza.club.satelite_1" target="_blank" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M14 3v10.1a4.6 4.6 0 1 1-3.4-4.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M14 3c.8 2.8 2.6 4.6 5.4 5.1V11c-2.3-.1-4-1-5.4-2.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a class="socBtn" href="https://www.facebook.com/IbizaClubBolivia" target="_blank" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v3H8v3h3v7h3v-7h3l1-3h-4V9c0-.6.4-1 1-1Z" fill="currentColor"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <span>© 2026 - Ibiza Club Bolivia. Todos los derechos reservados.</span>
+        <span class="footTag">@ibiza.club.satelite_1</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="./app.js"></script>
+</body>
+</html>
