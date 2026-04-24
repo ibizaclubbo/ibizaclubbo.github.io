@@ -353,7 +353,7 @@ h3 { margin: 0 0 8px; font-size: 20px }
   background:
     linear-gradient(135deg, rgba(180,0,255,.40), rgba(255,59,212,.16)),
     radial-gradient(800px 260px at 0% 30%, rgba(255,255,255,.12), transparent 55%),
-    url("./assets/sol a sol.png");
+    url("./assets/sol_a_sol.png");
   background-size: cover; background-position: center;
   filter: saturate(1.1) contrast(1.05); overflow: hidden;
 }
