@@ -11,23 +11,24 @@
 }
 
 *, *::before, *::after { box-sizing: border-box }
-html, body { height: 100% }
+html { scroll-behavior: smooth; overflow-x: clip }
 body {
   margin: 0;
+  font-size: 16px;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
     "Apple Color Emoji", "Segoe UI Emoji";
   color: var(--text);
   background:
     radial-gradient(900px 600px at 50% 0%, rgba(140,60,255,.22), transparent 60%),
     radial-gradient(1200px 900px at 50% 100%, rgba(0,0,0,.85), transparent 70%),
-    linear-gradient(180deg, #050509 0%, #040308 100%);
+    #050509;
   overflow-x: hidden;
 }
 
 a { color: inherit; text-decoration: none }
 p { color: var(--muted); line-height: 1.55 }
 small { color: var(--muted) }
-img { max-width: 100%; display: block }
+img { max-width: 100%; height: auto; display: block }
 
 .container { width: min(var(--max), 100%); padding: 0 24px; margin: 0 auto }
 .section { padding: 64px 0 }
@@ -65,6 +66,7 @@ img { max-width: 100%; display: block }
   border: 1px solid transparent;
   background: transparent;
   color: rgba(255,255,255,.86);
+  transition: background .18s ease, border-color .18s ease;
 }
 .navlinks a:hover {
   background: rgba(255,255,255,.06);
@@ -164,7 +166,7 @@ img { max-width: 100%; display: block }
 h1 { margin: 18px 0 10px; font-size: 52px; line-height: 1.05; letter-spacing: -.9px }
 h2 { margin: 0 0 10px; font-size: 34px; letter-spacing: -.6px }
 h3 { margin: 0 0 8px; font-size: 20px }
-.sub { max-width: 640px; margin: 0 auto; color: rgba(255,255,255,.62) }
+.sub { max-width: 640px; margin: 0 auto; color: rgba(255,255,255,.62); overflow-wrap: break-word }
 .kicker {
   display: inline-flex; gap: 10px; align-items: center;
   padding: 8px 12px; border-radius: 999px;
@@ -208,6 +210,7 @@ h3 { margin: 0 0 8px; font-size: 20px }
   padding: 44px 0 20px;
   display: flex; justify-content: center;
   overflow: hidden;
+  isolation: isolate;
 }
 
 /* Edge fade — blends pills into background */
@@ -239,7 +242,6 @@ h3 { margin: 0 0 8px; font-size: 20px }
   border: 1px solid rgba(255,255,255,.16);
   box-shadow: 0 16px 48px rgba(0,0,0,.65);
   margin-top: var(--mt, 0px);
-  will-change: transform;
   transition: box-shadow .3s ease, filter .3s ease;
 
   /* Entrance + float chained */
@@ -338,6 +340,7 @@ h3 { margin: 0 0 8px; font-size: 20px }
 .card.pad { padding: 22px }
 .card.poster {
   height: 320px; overflow: hidden;
+  isolation: isolate;
   background:
     radial-gradient(600px 300px at 35% 25%, rgba(180,0,255,.35), transparent 55%),
     radial-gradient(500px 300px at 70% 70%, rgba(255,59,212,.18), transparent 60%),
@@ -425,6 +428,7 @@ h3 { margin: 0 0 8px; font-size: 20px }
     linear-gradient(135deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
   border: 1px solid rgba(255,255,255,.10);
   overflow: hidden; position: relative;
+  isolation: isolate;
 }
 .bannerLarge::before {
   content: ""; position: absolute; inset: 14px; border-radius: 18px;
@@ -457,6 +461,7 @@ h3 { margin: 0 0 8px; font-size: 20px }
 }
 .eventCard img { width: 100%; display: block; aspect-ratio: 1; object-fit: cover }
 .eventBody { padding: 14px }
+.eventBody h3 { margin: 0 0 6px }
 .meta {
   display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px;
   color: rgba(255,255,255,.62); font-size: 12px;
@@ -490,6 +495,7 @@ h3 { margin: 0 0 8px; font-size: 20px }
 /* ── VIP PAGE ─────────────────────────── */
 
 .vipHero { padding: 46px 0 10px }
+.vipHero .ctaRow { margin-top: 14px }
 .vipCrown {
   width: 54px; height: 54px; border-radius: 18px;
   margin: 0 auto; display: grid; place-items: center;
@@ -507,6 +513,7 @@ h3 { margin: 0 0 8px; font-size: 20px }
     radial-gradient(600px 260px at 75% 75%, rgba(255,140,40,.14), transparent 65%),
     linear-gradient(135deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
   overflow: hidden; position: relative;
+  isolation: isolate;
   box-shadow: 0 18px 60px rgba(0,0,0,.35);
 }
 .vipHeroCard::before {
@@ -542,9 +549,12 @@ h3 { margin: 0 0 8px; font-size: 20px }
   box-shadow: 0 18px 60px rgba(0,0,0,.28);
 }
 .vipBanner h2 {
+  margin: 0;
   background: linear-gradient(90deg, rgba(255,210,80,.95), rgba(255,255,255,.92));
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
+.vipBanner p { margin: 8px 0 0 }
+.vipBanner .ctaRow { margin-top: 14px }
 
 
 /* ── CONTACTS PAGE ────────────────────── */
@@ -595,7 +605,7 @@ h3 { margin: 0 0 8px; font-size: 20px }
 /* ── FAQ / ACCORDION ──────────────────── */
 
 .faqs { margin-top: 30px }
-.acc { margin-top: 14px; display: flex; flex-direction: column; gap: 10px }
+.acc { margin-top: 14px; display: flex; flex-direction: column; gap: 10px; text-align: left }
 .accItem {
   border-radius: 16px;
   border: 1px solid rgba(255,255,255,.10);
@@ -714,23 +724,25 @@ h3 { margin: 0 0 8px; font-size: 20px }
   .navlinks { display: none }
   .navCta   { display: none }
 
+  .djCards { grid-template-columns: repeat(2, 1fr) }
+
   /* Switch gallery to horizontal scroll carousel */
   .pillGalleryWrap {
     padding: 20px 0 12px;
     overflow: hidden;
   }
   .pillGalleryWrap::before,
-  .pillGalleryWrap::after { display: none } /* remove edge fades on carousel */
+  .pillGalleryWrap::after { display: none }
 
   .pillGallery {
     width: 100%;
+    min-width: 0;
     gap: 10px;
     justify-content: flex-start;
     align-items: flex-end;
     overflow-x: auto;
     padding: 16px 20px 12px;
     scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
   .pillGallery::-webkit-scrollbar { display: none }
@@ -768,6 +780,7 @@ h3 { margin: 0 0 8px; font-size: 20px }
 
   .cardsRow     { grid-template-columns: 1fr }
   .djCards      { grid-template-columns: 1fr }
+  .marquee      { font-size: 16px }
   .benefitsGrid { grid-template-columns: 1fr }
   .socialGrid   { grid-template-columns: repeat(2, 1fr) }
   .mediaCard    { height: 130px }

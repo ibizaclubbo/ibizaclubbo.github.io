@@ -47,7 +47,7 @@ function wireMenu(){
 
   openBtn?.addEventListener("click", open);
   closeBtn?.addEventListener("click", close);
-  overlay?.addEventListener("click", (e)=>{ if(e.target===overlay) close(); });
+  overlay?.addEventListener("click", (e)=>{ if(e.target===overlay) close(); }, { passive: true });
   document.addEventListener("keydown", (e)=>{ if(e.key==="Escape") close(); });
 }
 
